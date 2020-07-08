@@ -13,5 +13,12 @@ namespace CHAdmin.Areas.Client.Dao
         {
             return new DetailDao().getTuongTu(maLoaiSP);
         }
+        public string getTenLoai(int maLoaiSP)
+        {
+            using(var ctx=new CoffeeHouseDbContext())
+            {
+                return ctx.loaisanphams.FirstOrDefault(x => x.maloaisp == maLoaiSP).tenloaisp;
+            }
+        }
     }
 }

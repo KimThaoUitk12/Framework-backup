@@ -232,3 +232,42 @@ C:\Users\Quoc Tuan\Desktop\Framework-backup\Model\obj\Debug\Model.csproj.CoreCom
 C:\Users\Quoc Tuan\Desktop\Framework-backup\Model\obj\Debug\Model.csproj.CopyComplete
 C:\Users\Quoc Tuan\Desktop\Framework-backup\Model\obj\Debug\Model.dll
 C:\Users\Quoc Tuan\Desktop\Framework-backup\Model\obj\Debug\Model.pdb
+D:\Framework-backup\Model\bin\Debug\Model.dll.config
+D:\Framework-backup\Model\bin\Debug\Model.dll
+D:\Framework-backup\Model\bin\Debug\Model.pdb
+D:\Framework-backup\Model\bin\Debug\BouncyCastle.Crypto.dll
+D:\Framework-backup\Model\bin\Debug\EntityFramework.dll
+D:\Framework-backup\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Framework-backup\Model\bin\Debug\Google.Protobuf.dll
+D:\Framework-backup\Model\bin\Debug\K4os.Compression.LZ4.dll
+D:\Framework-backup\Model\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Framework-backup\Model\bin\Debug\K4os.Hash.xxHash.dll
+D:\Framework-backup\Model\bin\Debug\MySql.Data.dll
+D:\Framework-backup\Model\bin\Debug\MySql.Data.EntityFramework.dll
+D:\Framework-backup\Model\bin\Debug\Newtonsoft.Json.dll
+D:\Framework-backup\Model\bin\Debug\Renci.SshNet.dll
+D:\Framework-backup\Model\bin\Debug\System.Buffers.dll
+D:\Framework-backup\Model\bin\Debug\System.Memory.dll
+D:\Framework-backup\Model\bin\Debug\System.Numerics.Vectors.dll
+D:\Framework-backup\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Framework-backup\Model\bin\Debug\Ubiety.Dns.Core.dll
+D:\Framework-backup\Model\bin\Debug\Zstandard.Net.dll
+D:\Framework-backup\Model\bin\Debug\EntityFramework.xml
+D:\Framework-backup\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Framework-backup\Model\bin\Debug\Google.Protobuf.xml
+D:\Framework-backup\Model\bin\Debug\K4os.Compression.LZ4.xml
+D:\Framework-backup\Model\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Framework-backup\Model\bin\Debug\K4os.Hash.xxHash.xml
+D:\Framework-backup\Model\bin\Debug\MySql.Data.xml
+D:\Framework-backup\Model\bin\Debug\MySql.Data.EntityFramework.xml
+D:\Framework-backup\Model\bin\Debug\Newtonsoft.Json.xml
+D:\Framework-backup\Model\bin\Debug\Renci.SshNet.xml
+D:\Framework-backup\Model\bin\Debug\System.Buffers.xml
+D:\Framework-backup\Model\bin\Debug\System.Memory.xml
+D:\Framework-backup\Model\bin\Debug\System.Numerics.Vectors.xml
+D:\Framework-backup\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Framework-backup\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Framework-backup\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Framework-backup\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Framework-backup\Model\obj\Debug\Model.dll
+D:\Framework-backup\Model\obj\Debug\Model.pdb

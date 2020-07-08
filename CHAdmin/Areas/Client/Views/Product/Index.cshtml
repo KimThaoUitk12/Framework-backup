@@ -4,12 +4,13 @@
     Layout = "~/Areas/Client/Views/Shared/_LayoutMaster.cshtml";
     var loai = new Model.EF.CoffeeHouseDbContext().loaisanphams;
     List<Model.EF.sanpham> cungloai = ViewData["cungloai"] as List<Model.EF.sanpham>;
+    var tenloai = ViewData["ten"] as string;
 }
 
 <div class="inner-header">
     <div class="container">
         <div class="pull-left">
-            <h6 class="inner-title">Sản phẩm {{$tenloaisp->tenloaisp}}</h6>
+            <h6 class="inner-title">Sản phẩm @tenloai</h6>
         </div>
         <div class="pull-right">
             <div class="beta-breadcrumb font-large">
@@ -81,14 +82,14 @@
 
                     <div class="space50">&nbsp;</div>
 
-                    <div class="beta-products-list">
+                    @*<div class="beta-products-list">
                         <h4>Sản phẩm khác</h4>
                         <div class="beta-products-details">
                             <p class="pull-left">Tìm thấy {{$sp_khac->total()}} sản phẩm</p>
                             <div class="clearfix"></div>
                         </div>
                         <div class="row">
-                            @*@foreach ($sp_khac as $sp_k)
+                            @foreach ($sp_khac as $sp_k)
                                 {
                                     <div class="col-sm-4" style="height: 400px">
                                         <div class="single-item">
@@ -122,12 +123,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                }*@
+                                }
                         </div>
                         <div class="row">{{$sp_khac->links()}}</div>
                         <div class="space40">&nbsp;</div>
 
-                    </div> <!-- .beta-products-list -->
+                    </div>*@ <!-- .beta-products-list -->
                 </div>
             </div> <!-- end section with sidebar and main content -->
 
