@@ -41,7 +41,6 @@
                 {
                     if (Session["thongbao"] != null)
                     {
-                        @*<div class="alert alert-{{Session::get('flag')}}">{{Session::get('message')}}</div>*@
 
                         if ((string)Session["thongbao"] == "ok")
                         {
@@ -59,32 +58,23 @@
                 <h4>Đăng nhập</h4>
                 <hr />
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(model => model.userName, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(model => model.userName, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="form-block">
+						<label for="email">Email address*</label>
+                        @Html.TextBoxFor(model => model.userName, new { htmlAttributes = new { @class = "form-control", @type="email" } })
                         @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
-                    </div>
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
-                    </div>
+                <div class="form-block">
+                    <label for="phone">Password*</label>
+                    @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
                 </div>
 
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Đăng nhập" class="btn btn-default" />
-                    </div>
+                <div class="form-block">
+                        <input type="submit" value="Đăng nhập" class="btn btn-primary" />
                 </div>
-
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <a href="/Client/ForgotPassword/Index"><input type="button" value="Quên mật khẩu" class="btn btn-default"/></a>
-                    </div>
+                <div class="form-block">
+                    <a href="/Client/ForgotPassword/Index">Quên mật khẩu</a>
                 </div>
             </div>
                 }

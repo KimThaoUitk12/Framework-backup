@@ -9,7 +9,13 @@ namespace CHAdmin.Areas.Client.Dao
     
     public class DetailDao
     {
-        private CoffeeHouseDbContext context=new CoffeeHouseDbContext();
+        public struct sanphambanchay
+        {
+            public int masp;
+            public sanpham sp;
+        }
+
+        private CoffeeHouseDbContext context = new CoffeeHouseDbContext();
         //private CoffeeHouseDbContext context = new CoffeeHouseDbContext();
         public sanpham getDetail(int id)
         {
@@ -41,19 +47,28 @@ namespace CHAdmin.Areas.Client.Dao
                 //return context.sanphams.Where(x => x.maloaisp == maLoaiSP).ToList();
         }
 
-        public IEnumerable<sanpham> getBanChay()
+        public List<sanphambanchay> getBanChay()
         {
-                IQueryable<sanpham> query = (from sp in context.sanphams
-                                              join ct in context.ctdhs
-                                              on sp.masp equals ct.masp
-                                              group ct by ct.masp into dem
-                                              orderby dem.Sum(x => x.soluong)
-                                              select new
-                                              {
-                                                  masp = dem.Key,
-                                                  sp = dem.Select(x => x.sanpham)
-                                              }).Take(3).ToList() as IQueryable<sanpham>;
-                return query;
+            List<sanphambanchay> list = new List<sanphambanchay>();
+            var query = (from sp in context.sanphams
+                         join ct in context.ctdhs
+                         on sp.masp equals ct.masp
+                         group new { ct, sp } by ct.masp into dem
+                         orderby dem.Sum(x => x.ct.soluong)
+                         select new
+                         {
+                             masp = dem.Key,
+                             sp = dem.Select(x => x.sp).FirstOrDefault()
+                         }).Take(3).ToList();
+            foreach(var item in query)
+            {
+                list.Add(new sanphambanchay
+                {
+                    masp = (int)item.masp,
+                    sp =  item.sp
+                });
+            }
+            return list;
             //}
         }
     }

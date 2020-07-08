@@ -10,8 +10,8 @@
         <div class="container">
             <div class="pull-left auto-width-left">
                 <ul class="top-menu menu-beta l-inline">
-                    <li><a href="{{ route('lien-he') }}"><i class="fa fa-home"></i>Quốc Tuấn - Đại học công nghệ thông tin - KP6 - Linh Trung - Thủ Đức - TP HCM</a></li>
-                    <li><a href="{{ route('lien-he') }}"><i class="fa fa-phone"></i> 0163 296 7751</a></li>
+                    <li><a href="Javascript:void(0)"><i class="fa fa-home"></i>Quốc Tuấn - Đại học công nghệ thông tin - KP6 - Linh Trung - Thủ Đức - TP HCM</a></li>
+                    <li><a href="Javascript:void(0)"><i class="fa fa-phone"></i> 0163 296 7751</a></li>
                 </ul>
             </div>
             <div class="pull-right auto-width-right">
@@ -46,8 +46,8 @@
                     </form>
                 </div>
                 <div class="beta-comp">
-                    @if (Session["giohang"] != null)
-                    {
+                    
+                    
                         <div class="cart">
                             <div class="beta-select">
                                 <i class="fa fa-shopping-cart"></i> Giỏ hàng 
@@ -58,7 +58,9 @@
                             <i class="fa fa-chevron-down"></i>
                             </div>
                             <div class="beta-dropdown cart-body">
-                                @foreach (var hang in Session["giohang"] as List<CHAdmin.Models.cartModel>)
+                                @if (Session["giohang"] != null)
+                                {
+                                foreach (var hang in Session["giohang"] as List<CHAdmin.Models.cartModel>)
                                 {
                                     <div class="cart-item">
                                         @*<a class="cart-item-delete" href="/Client/Cart/XoaSp/@hang.maSP"><i class="fa fa-times"></i></a>*@
@@ -70,13 +72,29 @@
                                                     @hang.soLuong*<span>
                                                         @if (@hang.donGiaKM == 0)
                                                         {@hang.donGiaGoc }
-                                                    else
-                                                    {@hang.donGiaKM} VND
+                                                        else
+                                                        {@hang.donGiaKM} VND
                                                     </span>
                                                 </span>
                                             </div>
                                         </div>
                                     </div>
+                                    }
+                                }
+                                else
+                                {
+                            <div class="cart-item">
+                                @*<a class="cart-item-delete" href="/Client/Cart/XoaSp/@hang.maSP"><i class="fa fa-times"></i></a>*@
+                                <div class="media">
+                                    <a class="pull-left" href="#"><img src="#" alt=""></a>
+                                    <div class="media-body">
+                                        <span class="cart-item-title">Không có</span>
+                                        <span class="cart-item-amount">
+                                            0*0 <span>VND</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                                 }
                                 <div class="cart-caption">
                                     <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">@tongSoTien VND</span></div>
@@ -89,7 +107,7 @@
                                 </div>
                             </div>
                         </div> <!-- .cart -->
-                    }
+                   
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -111,8 +129,8 @@
                             }
                         </ul>
                     </li>
-                    <li><a href="{{ route('gioi-thieu') }}">Giới thiệu</a></li>
-                    <li><a href="{{ route('lien-he') }}">Liên hệ</a></li>
+                    <li><a href="/Client/Introduct/Index">Giới thiệu</a></li>
+                    <li><a href="/Client/Contact/Index">Liên hệ</a></li>
                 </ul>
                 <div class="clearfix"></div>
             </nav>

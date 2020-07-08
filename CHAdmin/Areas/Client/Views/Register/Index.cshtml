@@ -3,6 +3,8 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Client/Views/Shared/_LayoutMaster.cshtml";
+    string thongbao_loi = ViewBag.fail as string;
+    string thongbao_thanhcong = ViewBag.success as string;
 }
 
 <div class="inner-header">
@@ -27,25 +29,14 @@
             @Html.AntiForgeryToken()
             <div class="row">
                 <div class="col-sm-3"></div>
-                @*@if (count($errors) > 0)
-                    {
-                        <div class="alert alert-danger">
-                            @foreach ($errors->all() as $err)
-                                                        { {$err} }
-                            @endforeach
-                        </div>
-                    }
-                    @if (Session::has('thanhcong'))
-                    {
-                        <div class="alert alert-success">{{Session::get('thanhcong')}}</div>
-                    }*@
-                @if (ViewBag.fail != "")
+
+                @if (thongbao_loi != null && !thongbao_loi.Equals(""))
                 {
                     <div class="alert alert-danger">
                         @ViewBag.fail
                     </div>
                 }
-                @if (ViewBag.success != "")
+                @if (thongbao_thanhcong != null && !thongbao_thanhcong.Equals(""))
                 {
                     <div class="alert alert-success">
                         @ViewBag.success
@@ -60,82 +51,64 @@
                     <div class="form-horizontal">
                         <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
+                    <div class="form-block">
+                        <!--Html.LabelFor(model => model.email, htmlAttributes: new { class = "control-label col-md-2" })-->
+                        <label for="email">Email*</label>
+                        @Html.TextBoxFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @type= "email" } })
+                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.tentk, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.tentk, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="form-block">
+                            <label for="your_last_name">Tên tài khoản*</label>
+                                @Html.TextBoxFor(model => model.tentk, new { htmlAttributes = new { @class = "form-control", @type="text" } })
                                 @Html.ValidationMessageFor(model => model.tentk, "", new { @class = "text-danger" })
-                            </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                        <div class="form-block">
+                            <label for="phone">Password*</label>
+                                @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @class = "form-control", @type="password" } })
                                 @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
-                            </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.confirmpassword, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.PasswordFor(model => model.confirmpassword, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.confirmpassword, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label for="phone">Confirm password*</label>
+                            @Html.PasswordFor(model => model.confirmpassword, new { htmlAttributes = new { @class = "form-control", @type="password" } })
+                            @Html.ValidationMessageFor(model => model.confirmpassword, "", new { @class = "text-danger" })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.hoten, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.hoten, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.hoten, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label for="adress">Họ tên*</label>
+                            @Html.TextBoxFor(model => model.hoten, new { htmlAttributes = new { @class = "form-control", @type="text" } })
+                            @Html.ValidationMessageFor(model => model.hoten, "", new { @class = "text-danger" })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.diachi, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextAreaFor(model => model.diachi, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.diachi, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label for="adress">Địa chỉ*</label>
+                            @Html.TextAreaFor(model => model.diachi, new { htmlAttributes = new { @class = "form-control", @type="text" } })
+                            @Html.ValidationMessageFor(model => model.diachi, "", new { @class = "text-danger" })
+                       
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.gioitinh, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.gioitinh, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label for="adress">Giới tính*</label>
+                            @Html.TextBoxFor(model => model.gioitinh, new { htmlAttributes = new { @class = "form-control", @type="text" } })
+                            @Html.ValidationMessageFor(model => model.gioitinh, "", new { @class = "text-danger" })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.sodt, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.sodt, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.sodt, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label for="phone">Số điện thoại*</label>
+                            @Html.TextBoxFor(model => model.sodt, new { htmlAttributes = new { @class = "form-control", @type="number" } })
+                            @Html.ValidationMessageFor(model => model.sodt, "", new { @class = "text-danger" })
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.hinhanh, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.hinhanh, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.hinhanh, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="form-block">
+                            <label>Hình ảnh</label>
+                            @Html.TextBoxFor(model => model.hinhanh, new { htmlAttributes = new { @class = "form-control", @type="file" } })
+                            @Html.ValidationMessageFor(model => model.hinhanh, "", new { @class = "text-danger" })
                         </div>
 
-                        <div class="form-group">
-                            <div class="col-md-offset-2 col-md-10">
-                                <input type="submit" value="Đăng kí" class="btn btn-default" />
-                            </div>
+                        <div class="form-block">
+                            <input type="submit" value="Đăng kí" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>

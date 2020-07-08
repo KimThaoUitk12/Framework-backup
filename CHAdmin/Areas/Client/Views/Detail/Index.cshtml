@@ -7,7 +7,7 @@
     var spmoi = new Model.EF.CoffeeHouseDbContext().sanphams.OrderByDescending(x => x.ngaynhap).Take(3).ToList();
     int maloaisp = (int)ViewData["maloaisp"];
     var loai = new CHAdmin.Areas.Client.Dao.DetailDao().getTuongTu(maloaisp);
-    var banchay = new CHAdmin.Areas.Client.Dao.DetailDao().getBanChay();
+    List<CHAdmin.Areas.Client.Dao.DetailDao.sanphambanchay> banchay = new CHAdmin.Areas.Client.Dao.DetailDao().getBanChay();
 }
 @model Model.EF.sanpham
 
@@ -125,7 +125,7 @@
                                 </div>
                             }
                         </div>
-                        <div class="row">{{$sp_tuongtu->links()}}</div>
+                        <!--<div class="row">{{$sp_tuongtu->links()}}</div>-->
                     </div> <!-- .beta-products-list -->
                 </div>
                 <div class="col-sm-3 aside">
@@ -135,17 +135,18 @@
                             <div class="beta-sales beta-lists">
                                 @foreach (var sp in banchay)
                                     {
+
                                         <div class="media beta-sales-item">
-                                            <a class="pull-left" href="{{route('chi-tiet-san-pham', $spbc->masp)}}"><img src="image/product/@sp.hinhanh" alt=""></a>
+                                            <a class="pull-left" href="/Client/Detail/Index/@sp.sp.masp"><img src="image/product/@sp.sp.hinhanh" alt=""></a>
                                             <div class="media-body">
-                                                @sp.tensp<br>
-                                                @if (@sp.giakm == 0)
+                                                @sp.sp.tensp<br>
+                                                @if (@sp.sp.giakm == 0)
                                                 {
-                                                <span class="beta-sales-price">@sp.gia VND</span>
+                                                <span class="beta-sales-price">@sp.sp.gia VND</span>
                                                 }
                                                 else
                                                 {
-                                                <span class="beta-sales-price">@sp.giakm VND</span>
+                                                <span class="beta-sales-price">@sp.sp.giakm VND</span>
                                                 }
                                             </div>
                                         </div>
@@ -159,34 +160,28 @@
                             <div class="beta-sales beta-lists">
                                 <div class="paginateRow">
                                     @foreach (var sp in spmoi)
-                                    {
-                                        <span>
-                                            <div class="media beta-sales-item">
-                                                <a class="pull-left" href="/Client/Detail/Index/@sp.masp"><img src="~/Assets/Client/image/product/@sp.hinhanh" alt="" height="250px"></a>
-                                                <div class="media-body">
-                                                    @sp.tensp<br>
-                                                    @if (sp.giakm == 0)
-                                                    {
-                                                        <span class="beta-sales-price">@sp.gia VND</span>
-                                                    }
-                                                    else
-                                                    {
-                                                        <span class="beta-sales-price">@sp.giakm VND</span>
-                                                    }
-                                                </div>
-                                                <div class="single-item-caption">
-                                                    <a class="add-to-cart pull-left" href="javascript:void(0)" onclick="addCart(@sp.masp)"><i class="fa fa-shopping-cart"></i></a>
-                                                    <a class="beta-btn primary" href="/Client/Detail/Index/@sp.masp">Chi tiết<i class="fa fa-chevron-right"></i></a>
-                                                    <div class="clearfix"></div>
-                                                </div>
+                                    {  
+                                        <div class="media beta-sales-item">
+                                            <a class="pull-left" href="/Client/Detail/Index/@sp.masp"><img src="~/Assets/Client/image/product/@sp.hinhanh" alt=""></a>
+                                            <div class="media-body">
+                                                @sp.tensp<br>
+                                                @if (sp.giakm == 0)
+                                                {
+                                                    <span class="beta-sales-price">@sp.gia VND</span>
+                                                }
+                                                else
+                                                {
+                                                <span class="beta-sales-price">@sp.giakm VND</span>
+                                                }
                                             </div>
-                                        </span><br>
+                                        </div>
+                                        <br>
                                     }
-                                    <div class="paginate">{{$sp_moi->links()}}</div>
+                                    <!--<div class="paginate">{{$sp_moi->links()}}</div>-->
+                                </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div> <!-- best sellers widget -->
             </div>
         </div>
