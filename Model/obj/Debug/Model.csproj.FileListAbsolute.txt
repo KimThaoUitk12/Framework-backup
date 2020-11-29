@@ -271,3 +271,42 @@ D:\Framework-backup\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Framework-backup\Model\obj\Debug\Model.csproj.CopyComplete
 D:\Framework-backup\Model\obj\Debug\Model.dll
 D:\Framework-backup\Model\obj\Debug\Model.pdb
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Model.dll.config
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Model.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Model.pdb
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\BouncyCastle.Crypto.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\EntityFramework.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Google.Protobuf.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Compression.LZ4.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Hash.xxHash.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\MySql.Data.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\MySql.Data.EntityFramework.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Newtonsoft.Json.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Renci.SshNet.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Buffers.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Memory.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Numerics.Vectors.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Ubiety.Dns.Core.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Zstandard.Net.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\EntityFramework.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Google.Protobuf.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Compression.LZ4.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\K4os.Hash.xxHash.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\MySql.Data.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\MySql.Data.EntityFramework.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Newtonsoft.Json.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\Renci.SshNet.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Buffers.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Memory.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Numerics.Vectors.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\obj\Debug\Model.csproj.CopyComplete
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\obj\Debug\Model.dll
+D:\Tài liệu HK2 2019 - 2020\Xây dựng HTTT trên framework\Đồ án\File Báo cáo\Framework\Model\obj\Debug\Model.pdb

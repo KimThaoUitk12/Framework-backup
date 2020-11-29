@@ -50,48 +50,6 @@
                         </div>
 
                         <div class="row">
-
-
-
-                            @*@foreach (var spmoi in moi)
-            {
-                <div class="col-sm-3" style="height: 400px;">
-                    <div class="single-item">
-                        @if (spmoi.giakm != 0)
-                        {
-                            <div class="ribbon-wrapper">
-                                <div class="ribbon sale">Sale</div>
-                            </div>
-                        }
-
-                        <div class="single-item-header">
-                            <a href="#"><img style="box-shadow: 0px 0px 3px 0px rgba(88, 88, 88, 0.3);" src="~/Assets/Client/image/product/@spmoi.hinhanh" alt="" height="250px"></a>
-                        </div>
-                        <div class="single-item-body">
-                            <p class="single-item-title">@spmoi.tensp</p>
-                            <p class="single-item-price">
-                                @if (spmoi.giakm == 0)
-                                {
-                                    <span class="flash-sale">@spmoi.gia VND</span>
-                                }
-                                else
-                                {
-                                    <span class="flash-del">@spmoi.gia VND</span>
-                                    <span class="flash-sale">@spmoi.giakm VND</span>
-                                }
-                            </p>
-                        </div>
-                        <div class="single-item-caption">
-                            <a class="add-to-cart pull-left" href="javascript:void(0)" onclick="addCart(@spmoi.masp)"><i class="fa fa-shopping-cart"></i></a>
-                            <a class="beta-btn primary" href="/Client/Detail/Index/@spmoi.masp">Chi tiết<i class="fa fa-chevron-right"></i></a>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            }*@
-
-
-
                             @foreach (var spmoi in ViewBag.webgridData1)
                             {
                                 <div class="col-sm-3" style="height: 400px;">
@@ -147,37 +105,6 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="row">
-
-
-                            @*@foreach (var spkm in km)
-            {
-                <div class="col-sm-3" style="height: 400px">
-                    <div class="single-item">
-                        <div class="ribbon-wrapper">
-                            <div class="ribbon sale">Sale</div>
-                        </div>
-
-                        <div class="single-item-header">
-                            <a href="/Client/Detail/Index/@spkm.masp"><img style="box-shadow: 0px 0px 3px 0px rgba(88, 88, 88, 0.3);" src="~/Assets/Client/image/product/@spkm.hinhanh" alt="" height="250"></a>
-                        </div>
-                        <div class="single-item-body">
-                            <p class="single-item-title">@spkm.tensp</p>
-                            <p class="single-item-price">
-                                <span class="flash-del">@spkm.gia VND</span>
-                                <span class="flash-sale">@spkm.giakm VND</span>
-                            </p>
-                        </div>
-                        <div class="single-item-caption">
-                            <a class="add-to-cart pull-left" href="javascript:void(0)" onclick="addCart(@spkm.masp)"><i class="fa fa-shopping-cart"></i></a>
-                            <a class="beta-btn primary" href="/Client/Detail/Index/@spkm.masp">Chi tiết<i class="fa fa-chevron-right"></i></a>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            }
-            <div class="row">{!! $sanpham_khuyenmai->appends(['new_product' => $new_product->currentPage()])->links()!!}</div>*@
-
-
                             @foreach (var spkm in ViewBag.webgridData2)
                             {
                                 <div class="col-sm-3" style="height: 400px">

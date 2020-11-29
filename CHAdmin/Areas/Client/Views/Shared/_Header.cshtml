@@ -3,6 +3,7 @@
     var tongSoHang = CHAdmin.Models.cartModel.TongSoHang;
     var tongSoTien = CHAdmin.Models.cartModel.TongTien;
     var loais = new Model.EF.CoffeeHouseDbContext().loaisanphams;
+    string a = "0";
 }
 @*@model List<Model.EF.loaisanpham>*@
 <div id="header">
@@ -54,14 +55,15 @@
                                 @if (Session["giohang"] != null)
                                 { @tongSoHang }
                                 else
-                                {<p>Trống</p>} 
+                                { @a } 
                             <i class="fa fa-chevron-down"></i>
                             </div>
                             <div class="beta-dropdown cart-body">
                                 @if (Session["giohang"] != null)
                                 {
-                                foreach (var hang in Session["giohang"] as List<CHAdmin.Models.cartModel>)
-                                {
+                                    
+                                    foreach (var hang in Session["giohang"] as List<CHAdmin.Models.cartModel>)
+                                    {
                                     <div class="cart-item">
                                         @*<a class="cart-item-delete" href="/Client/Cart/XoaSp/@hang.maSP"><i class="fa fa-times"></i></a>*@
                                         <div class="media">
@@ -83,18 +85,10 @@
                                 }
                                 else
                                 {
-                            <div class="cart-item">
-                                @*<a class="cart-item-delete" href="/Client/Cart/XoaSp/@hang.maSP"><i class="fa fa-times"></i></a>*@
-                                <div class="media">
-                                    <a class="pull-left" href="#"><img src="#" alt=""></a>
-                                    <div class="media-body">
-                                        <span class="cart-item-title">Không có</span>
-                                        <span class="cart-item-amount">
-                                            0*0 <span>VND</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                                    CHAdmin.Models.cartModel.TongSoHang = 0;
+                                    CHAdmin.Models.cartModel.tongTien = 0;
+                                    tongSoTien = 0;
+                                    tongSoHang = 0;
                                 }
                                 <div class="cart-caption">
                                     <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">@tongSoTien VND</span></div>

@@ -1838,7 +1838,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Client\Data\" />
-    <Folder Include="Areas\Client\Views\GetNews\" />
     <Folder Include="Assets\upload\files\" />
     <Folder Include="Assets\upload\flash\" />
     <Folder Include="Assets\upload\images\san-pham\" />
